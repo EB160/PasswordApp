@@ -62,13 +62,16 @@ public class PasswordApp {
             return;
         }
 		
+        PasswordAppMain passwordApp = new PasswordAppMain();
 		
-		
-		
-		
-		
-		
-		
+		int largestBlock = passwordApp.findLongestBlock(password);
+		if (largestBlock <= 2) {
+			textAreaOutput.setText("The largest block in the password is " + largestBlock + " . This is a decent password.");
+		} else {
+			textAreaOutput.setText
+			("The largest block in the password is " + largestBlock + " . This password can be made stronger by reducing this block by " + (largestBlock - 2));
+
+		}
 		
 		
 	}
